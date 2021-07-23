@@ -87,7 +87,7 @@
 				gl.uniform2f(localizacao_uniform_resolucao, canvas.width, canvas.height);
 			}
 
-			var quantidade_meta_balls = 100;
+			var quantidade_meta_balls = Math.floor(window.innerWidth * window.innerHeight / 10000);
 
 			var codigo_vertex_shader = document.getElementById('vertex_glsl').innerHTML;
 			var codigo_fragment_shader = `precision highp float;uniform float x_meta_balls[${quantidade_meta_balls}];uniform float y_meta_balls[${quantidade_meta_balls}];const int quantidade_meta_balls = ${quantidade_meta_balls};` + document.getElementById('fragment_glsl').innerHTML;
