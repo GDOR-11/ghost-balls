@@ -1,2 +1,3 @@
 # ghost-balls
-watch this relaxing shader anytime you want!
+relax watching this shader!
+currently there is an bug in some browsers :(
