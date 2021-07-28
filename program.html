@@ -50,7 +50,6 @@
 			}
 		</script>
 		<script>
-			try {
 			class MetaBall {
 				constructor(x, y) {
 					this.x = x || Math.random() * largura;
@@ -146,8 +145,8 @@
 
 			var localizacao_uniform_x_meta_balls = gl.getUniformLocation(programa, 'x_meta_balls');
 			var localizacao_uniform_y_meta_balls = gl.getUniformLocation(programa, 'y_meta_balls');
-			var x = new Float32Array([...Array(quantidade_meta_balls)]);
-			var y = new Float32Array([...Array(quantidade_meta_balls)]);
+			var x = new Float32Array(quantidade_meta_balls);
+			var y = new Float32Array(quantidade_meta_balls);
 			for(var i = 0;i < quantidade_meta_balls;i++) {
 				x[i] = meta_balls[i].x;
 				y[i] = meta_balls[i].y;
@@ -193,10 +192,6 @@
 				if(!document.fullscreenElement) {
 					document.body.style.cursor = 'context-menu';
 				}
-			}
-			} catch(error) {
-				alert('Error: ' + error);
-				document.body.innerHTML = 'Error:\n' + error;
 			}
 		</script>
 	</body>
