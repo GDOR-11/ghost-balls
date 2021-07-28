@@ -50,6 +50,7 @@
 			}
 		</script>
 		<script>
+			try {
 			class MetaBall {
 				constructor(x, y) {
 					this.x = x || Math.random() * largura;
@@ -192,6 +193,9 @@
 				if(!document.fullscreenElement) {
 					document.body.style.cursor = 'context-menu';
 				}
+			}
+			} catch(error) {
+				document.body.innerHTML = 'Error:\n' + error;
 			}
 		</script>
 	</body>
